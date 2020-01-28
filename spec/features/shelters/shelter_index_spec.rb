@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'shelter index page', type: :feature do
+RSpec.describe 'shelter index page show all', type: :feature do
   context 'as a user' do
     it 'can see all shelter names' do
       shelter_1 = Shelter.create(name: 'Pets R Us',
@@ -18,6 +18,20 @@ RSpec.describe 'shelter index page', type: :feature do
 
       expect(page).to have_content(shelter_1.name)
       expect(page).to have_content(shelter_2.name)
+    end
+  end
+end
+
+RSpec.describe 'shelter index page new link', type: :feature do
+  context 'as a user' do
+    it 'has a link to go to a new shelter entry' do
+      visit '/shelters'
+
+      expect(page).to have_link("Input New Shelter")
+
+      click_link("Input New Shelter")
+      
+      expect(current_path).to eq('/shelters/new')
     end
   end
 end
