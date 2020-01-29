@@ -1,7 +1,7 @@
 <h1>Update Information for: </h1><br>
 <h2><%= @shelter.name %></h2>
 
-<%= form_tag %>
+
 
 <%= form_tag("/shelters/#{@shelter.id}/edit", method: :patch) do%>
   <label>Name: </label>
