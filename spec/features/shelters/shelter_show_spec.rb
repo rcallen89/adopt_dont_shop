@@ -39,3 +39,25 @@ RSpec.describe 'shelter show page with update', type: :feature do
     end
   end
 end
+
+RSpec.describe 'shelter show delete', type: :feature do
+  context 'as a user' do
+    it 'has a delete link and reroutes to shelter index' do
+      shelter_1 = Shelter.create(name: 'Pets R Us',
+                                 address: '123 Main St',
+                                 city: 'Denver',
+                                 state: 'CO',
+                                 zip: '80134')
+
+      visit "/shelters/#{shelter_1.id}"
+    
+      # expect(page).to have_content("Delete Shelter")
+
+      click_on("Delete Shelter")
+
+      expect(current_path).to eq('/shelters')
+
+      expect(page).not_to have_content("#{shelter_1.name}")
+    end
+  end
+end
