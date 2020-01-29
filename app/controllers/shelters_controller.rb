@@ -24,5 +24,9 @@ class SheltersController < ApplicationController
     redirect_to '/shelters'
   end
 
+  def edit
+    
+  end
+
 
 end

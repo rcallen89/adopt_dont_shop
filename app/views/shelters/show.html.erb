@@ -1,4 +1,5 @@
 <h1><%= @shelter.name %></h1><br><br>
 
 <p>Address: <%= @shelter.address %>, <%= @shelter.city %> <%= @shelter.state %>, <%= @shelter.zip%></p>
-
+<br>
+<a href="/shelters/<%= @shelter.id %>/edit">Update Shelter</a>
