@@ -23,9 +23,7 @@ RSpec.describe 'shelter new input form', type: :feature do
 
       expect(current_path).to eq('/shelters')
 
-      # Why Doesn't this work?
-      # expect(current_path).to have_link("Petty Pet Shop")
-      
+      expect(page).to have_content(Shelter.last.name)
     end
   end
 end
