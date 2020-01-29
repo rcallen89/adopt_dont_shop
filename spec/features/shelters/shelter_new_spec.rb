@@ -5,14 +5,6 @@ RSpec.describe 'shelter new input form', type: :feature do
     it 'can see a form for new shelter' do
       visit '/shelters/new'
 
-      expect(page).to have_css('#shelter-input')
-      expect(page).to have_field('name')
-      expect(page).to have_field('address')
-      expect(page).to have_field('city')
-      expect(page).to have_field('state')
-      expect(page).to have_field('zip')
-      expect(page).to have_button('shelter-submit')
-
       fill_in 'name', with: 'Petty Pet Shop'
       fill_in 'address', with: '1010 Street Pl'
       fill_in 'city', with: 'Denver'
