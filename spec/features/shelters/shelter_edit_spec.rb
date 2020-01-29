@@ -22,7 +22,6 @@ RSpec.describe 'shelter edit page', type: :feature do
       click_button('commit')
 
       expect(current_path).to eq("/shelters/#{shelter_1.id}")
-      
       expect(page).to have_content("Petty Pet Shop Edited")
     end
   end
