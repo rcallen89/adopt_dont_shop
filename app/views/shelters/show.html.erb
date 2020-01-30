@@ -3,7 +3,5 @@
 <p>Address: <%= @shelter.address %>, <%= @shelter.city %> <%= @shelter.state %>, <%= @shelter.zip%></p>
 <br>
 <%= button_to "Update Shelter", "/shelters/#{@shelter.id}/edit", method: :get %>
-<a href="/shelters/<%= @shelter.id %>/pets">Pets Here</a>
-
-<br><br>
+<%= button_to "Our Pets", "/shelters/#{@shelter.id}/pets", method: :get %>
 <%= button_to "Delete Shelter", "/shelters/#{@shelter.id}", method: :delete %>
