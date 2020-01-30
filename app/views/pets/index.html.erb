@@ -2,11 +2,11 @@
 <%# <a href="/shelters/new">Input New Shelter</a></br></br> %>
 
 <% @pets.each do |pet| %>
-  <h2><%= link_to "#{pet.name}", "/pets/#{pet.id}" %></h2>
+  <h2>Name: <%= link_to "#{pet.name}", "/pets/#{pet.id}" %></h2>
   <img src="<%= pet.image %>">
   <ul>
-    <li><%= pet.approximate_age %></li>
-    <li><%= pet.sex %></li>
-    <li><%= pet.shelter.name %></li>
+    <li>Age: <%= pet.approximate_age %></li>
+    <li>Sex: <%= pet.sex %></li>
+    <li>Shelter: <%= link_to "#{pet.shelter.name}", "/shelters/#{pet.shelter.id}" %></li>
   </ul>
 <% end %>
