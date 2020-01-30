@@ -1,0 +1,24 @@
+<h1>Create New Pet</h1><br>
+
+<%# What is the authenticity_token - When are we learning about it - etc -etc %>
+
+
+
+<%= form_tag('/pets') do%>
+  <%= label_tag 'Image:'%>
+  <%= text_field_tag 'image', nil, :required => true%>
+  <br>
+  <br>
+  <%= label_tag 'Name:'%>
+  <%= text_field_tag 'name', nil, :required => true%>
+  <%= label_tag 'Description:'%>
+  <%= text_field_tag 'description', nil, :required => true%>
+  <%= label_tag 'Age:'%>
+  <%= text_field_tag 'approximate_age', nil, :required => true%>
+  <%= label_tag 'Sex:'%>
+  <%= text_field_tag 'sex', nil, :required => true%>
+  <%= text_field_tag 'status', 'adoptable', :hidden => true%>
+  <%= text_field_tag 'shelter_id', "#{@shelter_id}", :hidden => true%>
+  <br>
+  <%= submit_tag "Create Pet" %>
+<% end %>
