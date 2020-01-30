@@ -5,18 +5,18 @@
 
 
 <%= form_tag('/shelters') do%>
-  <label>Name: </label>
+  <%= label_tag 'Name:'%>
   <%= text_field_tag 'shelter[name]', nil, :required => true%>
   <br>
   <br>
-  <label>Address: </label>
+  <%= label_tag 'Address:'%>
   <%= text_field_tag 'shelter[address]', nil, :required => true%>
-  <label>City: </label>
+  <%= label_tag 'City:'%>
   <%= text_field_tag 'shelter[city]', nil, :required => true%>
-  <label>State: </label>
+  <%= label_tag 'State:'%>
   <%= text_field_tag 'shelter[state]', nil, :required => true%>
-  <label>Zip: </label>
+  <%= label_tag 'Zip:'%>
   <%= text_field_tag 'shelter[zip]', nil, :required => true%>
   <br>
-  <%= submit_tag(value="Submit Shelter") %>
+  <%= submit_tag "Create Shelter" %>
 <% end %>

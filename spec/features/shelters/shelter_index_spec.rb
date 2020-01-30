@@ -27,9 +27,7 @@ RSpec.describe 'shelter index page new link', type: :feature do
     it 'has a link to go to a new shelter entry' do
       visit '/shelters'
 
-      expect(page).to have_link("Input New Shelter")
-
-      click_link("Input New Shelter")
+      click_link("New Shelter")
       
       expect(current_path).to eq('/shelters/new')
     end

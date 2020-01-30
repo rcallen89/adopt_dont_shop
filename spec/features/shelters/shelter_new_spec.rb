@@ -11,7 +11,7 @@ RSpec.describe 'shelter new input form', type: :feature do
       fill_in 'shelter[state]', with: 'CO'
       fill_in 'shelter[zip]', with: '80134'
 
-      click_button('Submit Shelter')
+      click_button('Create Shelter')
 
       expect(current_path).to eq('/shelters')
 

@@ -31,9 +31,7 @@ RSpec.describe 'shelter show page with update', type: :feature do
 
       visit "/shelters/#{shelter_1.id}"
       
-      expect(page).to have_link("Update Shelter", :href => "/shelters/#{shelter_1.id}/edit")
-
-      click_link("Update Shelter")
+      click_on "Update Shelter"
 
       expect(current_path).to eq("/shelters/#{shelter_1.id}/edit")
     end
@@ -51,9 +49,7 @@ RSpec.describe 'shelter show delete', type: :feature do
 
       visit "/shelters/#{shelter_1.id}"
     
-      # expect(page).to have_content("Delete Shelter")
-
-      click_on("Delete Shelter")
+      click_on "Delete Shelter"
 
       expect(current_path).to eq('/shelters')
 
