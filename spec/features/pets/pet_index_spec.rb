@@ -19,7 +19,7 @@ RSpec.describe 'pet index page all', type: :feature do
                 approximate_age: "1 year old",
                 sex: "F",
                 description: 'butthead',
-                image: 'https://www.shutterstock.com/image-photo/beagle-running-over-green-meadow-1563583912',
+                image: 'https://image.shutterstock.com/image-photo/beagle-running-over-green-meadow-600w-1563583912.jpg',
                 status: "available",
                 shelter_id: mike.id)
 
@@ -27,18 +27,18 @@ RSpec.describe 'pet index page all', type: :feature do
                 approximate_age: "4 year old",
                 sex: "M",
                 description: 'good dog',
-                image: 'https://www.shutterstock.com/image-photo/beagle-running-over-green-meadow-1563583912',
+                image: 'https://image.shutterstock.com/image-photo/beagle-running-over-green-meadow-600w-1563583912.jpg',
                 status: "available",
                 shelter_id: meg.id)
 
       visit '/pets'
 
 
-      expect(page).to have_css("img[src*=#{pet_2.image}]")
+      expect(page).to have_css("img[src*='#{pet_2.image}']")
       expect(page).to have_content("Odell")
       expect(page).to have_content("4 year old")
       expect(page).to have_content("M")
-      expect(page).to have_content("meg.name")
+      expect(page).to have_content("#{meg.name}")
     end
   end
 end

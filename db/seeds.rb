@@ -22,7 +22,7 @@ Pet.create(name: "Athena",
            approximate_age: "1 year old",
            sex: "F",
            description: 'butthead',
-           image: 'https://www.shutterstock.com/image-photo/beagle-running-over-green-meadow-1563583912',
+           image: 'https://image.shutterstock.com/image-photo/beagle-running-over-green-meadow-600w-1563583912.jpg',
            status: "available",
            shelter_id: mike.id)
 
@@ -30,6 +30,6 @@ Pet.create(name: "Odell",
            approximate_age: "4 year old",
            sex: "M",
            description: 'good dog',
-           image: 'https://www.shutterstock.com/image-photo/beagle-running-over-green-meadow-1563583912',
+           image: 'https://image.shutterstock.com/image-photo/beagle-running-over-green-meadow-600w-1563583912.jpg',
            status: "available",
            shelter_id: meg.id)
