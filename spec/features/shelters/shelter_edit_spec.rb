@@ -13,11 +13,11 @@ RSpec.describe 'shelter edit page', type: :feature do
 
       expect(page).to have_content("Pets R Us")
 
-      fill_in 'name', with: 'Petty Pet Shop Edited'
-      fill_in 'address', with: '1010 Street Pl'
-      fill_in 'city', with: 'Denver'
-      fill_in 'state', with: 'CO'
-      fill_in 'zip', with: '80134'
+      fill_in 'shelter[name]', with: 'Petty Pet Shop Edited'
+      fill_in 'shelter[address]', with: '1010 Street Pl'
+      fill_in 'shelter[city]', with: 'Denver'
+      fill_in 'shelter[state]', with: 'CO'
+      fill_in 'shelter[zip]', with: '80134'
 
       click_button('commit')
 
