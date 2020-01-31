@@ -10,7 +10,7 @@ RSpec.describe 'shelter pet page', type: :feature do
                             zip: '80202')
 
       pet_2 = Pet.create(name: "Athena",
-                         approximate_age: "1 year old",
+                         age: "1",
                          sex: "F",
                          description: 'butthead',
                          image: 'https://image.shutterstock.com/image-photo/beagle-running-over-green-meadow-600w-1563583912.jpg',
@@ -21,7 +21,7 @@ RSpec.describe 'shelter pet page', type: :feature do
       
       expect(page).to have_css("img[src*='#{pet_2.image}']")
       expect(page).to have_content("Athena")
-      expect(page).to have_content("1 year old")
+      expect(page).to have_content("1")
       expect(page).to have_content("F")
     end
   end
@@ -37,7 +37,7 @@ RSpec.describe 'shelter pet page', type: :feature do
                             zip: '80202')
 
       pet_2 = Pet.create(name: "Athena",
-                         approximate_age: "1 year old",
+                         age: "1 year old",
                          sex: "F",
                          description: 'butthead',
                          image: 'https://image.shutterstock.com/image-photo/beagle-running-over-green-meadow-600w-1563583912.jpg',
@@ -53,13 +53,13 @@ RSpec.describe 'shelter pet page', type: :feature do
       fill_in 'image', with: 'https://image.shutterstock.com/image-photo/beagle-running-over-green-meadow-600w-1563583912.jpg'
       fill_in 'name', with: 'Ripley'
       fill_in 'description', with: 'Whip It'
-      fill_in 'approximate_age', with: '5'
+      fill_in 'age', with: '5'
       fill_in 'sex', with: 'M'
 
       click_on "Create Pet"
 
       expect(current_path).to eq("/shelters/#{mike.id}/pets")
-
+      save_and_open_page
       expect(page).to have_content("Ripley")
     end
   end

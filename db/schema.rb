@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 20200130205724) do
     t.string "image"
     t.string "name"
     t.text "description"
-    t.string "approximate_age"
+    t.string "age"
     t.string "sex"
     t.string "status"
     t.bigint "shelter_id"

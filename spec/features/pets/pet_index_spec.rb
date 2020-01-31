@@ -16,7 +16,7 @@ RSpec.describe 'pet index page all', type: :feature do
                     zip: '17033')
 
       pet_1 = Pet.create(name: "Athena",
-                approximate_age: "1 year old",
+                age: "1",
                 sex: "F",
                 description: 'butthead',
                 image: 'https://image.shutterstock.com/image-photo/beagle-running-over-green-meadow-600w-1563583912.jpg',
@@ -24,7 +24,7 @@ RSpec.describe 'pet index page all', type: :feature do
                 shelter_id: mike.id)
 
       pet_2 = Pet.create(name: "Odell",
-                approximate_age: "4 year old",
+                age: "4",
                 sex: "M",
                 description: 'good dog',
                 image: 'https://image.shutterstock.com/image-photo/beagle-running-over-green-meadow-600w-1563583912.jpg',
@@ -36,7 +36,7 @@ RSpec.describe 'pet index page all', type: :feature do
 
       expect(page).to have_css("img[src*='#{pet_2.image}']")
       expect(page).to have_content("Odell")
-      expect(page).to have_content("4 year old")
+      expect(page).to have_content("4")
       expect(page).to have_content("M")
       expect(page).to have_content("#{meg.name}")
     end

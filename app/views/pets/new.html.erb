@@ -7,14 +7,12 @@
 <%= form_tag("/shelters/#{@shelter_id}/pets") do%>
   <%= label_tag 'Image:'%>
   <%= text_field_tag 'image', nil, :required => true%>
-  <br>
-  <br>
   <%= label_tag 'Name:'%>
   <%= text_field_tag 'name', nil, :required => true%>
   <%= label_tag 'Description:'%>
   <%= text_field_tag 'description', nil, :required => true%>
   <%= label_tag 'Age:'%>
-  <%= text_field_tag 'approximate_age', nil, :required => true%>
+  <%= text_field_tag 'age', nil, :required => true%>
   <%= label_tag 'Sex:'%>
   <%= text_field_tag 'sex', nil, :required => true%>
   <%= text_field_tag 'status', 'adoptable', :hidden => true%>

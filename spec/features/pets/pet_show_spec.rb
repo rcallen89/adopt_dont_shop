@@ -10,7 +10,7 @@ RSpec.describe 'Pet Show Page', type: :feature do
                             zip: '80202')
 
       pet_2 = Pet.create(name: "Athena",
-                         approximate_age: "1 year old",
+                         age: "1 year old",
                          sex: "F",
                          description: 'butthead',
                          image: 'https://image.shutterstock.com/image-photo/beagle-running-over-green-meadow-600w-1563583912.jpg',
@@ -22,7 +22,7 @@ RSpec.describe 'Pet Show Page', type: :feature do
       expect(page).to have_css("img[src*='#{pet_2.image}']")
       expect(page).to have_content(pet_2.name)
       expect(page).to have_content(pet_2.description)
-      expect(page).to have_content(pet_2.approximate_age)
+      expect(page).to have_content(pet_2.age)
       expect(page).to have_content(pet_2.sex)
       expect(page).to have_content(pet_2.status)
     end

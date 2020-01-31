@@ -21,7 +21,7 @@ meg = Shelter.create(name: "Meg's Shelter",
 Pet.create(name: "Athena",
            approximate_age: "1",
            sex: "F",
-           description: 'butthead',
+           description: 'Butthead',
            image: 'https://image.shutterstock.com/image-photo/beagle-running-over-green-meadow-600w-1563583912.jpg',
            status: "available",
            shelter_id: mike.id)
