@@ -19,7 +19,7 @@ meg = Shelter.create(name: "Meg's Shelter",
                zip: '17033')
 
 Pet.create(name: "Athena",
-           approximate_age: "1",
+           age: "1",
            sex: "F",
            description: 'Butthead',
            image: 'https://image.shutterstock.com/image-photo/beagle-running-over-green-meadow-600w-1563583912.jpg',
@@ -27,7 +27,7 @@ Pet.create(name: "Athena",
            shelter_id: mike.id)
 
 Pet.create(name: "Odell",
-           approximate_age: "4",
+           age: "4",
            sex: "M",
            description: 'good dog',
            image: 'https://image.shutterstock.com/image-photo/beagle-running-over-green-meadow-600w-1563583912.jpg',
