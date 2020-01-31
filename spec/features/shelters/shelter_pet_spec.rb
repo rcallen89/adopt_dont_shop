@@ -59,7 +59,7 @@ RSpec.describe 'shelter pet page', type: :feature do
       click_on "Create Pet"
 
       expect(current_path).to eq("/shelters/#{mike.id}/pets")
-      save_and_open_page
+      
       expect(page).to have_content("Ripley")
     end
   end

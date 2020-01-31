@@ -13,5 +13,7 @@ patch '/shelters/:id/edit', to: 'shelters#update'
 delete '/shelters/:id', to: 'shelters#delete'
 get '/pets', to: 'pets#index'
 get '/pets/:id', to: 'pets#show'
+get '/pets/:id/edit', to: 'pets#edit'
+patch '/pets/:id/edit', to: 'pets#update'
 post '/shelters/:id/pets', to: 'pets#create'
 end
