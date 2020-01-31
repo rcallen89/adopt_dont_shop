@@ -4,7 +4,7 @@
 
 
 
-<%= form_tag('/pets') do%>
+<%= form_tag("/shelters/#{@shelter_id}/pets") do%>
   <%= label_tag 'Image:'%>
   <%= text_field_tag 'image', nil, :required => true%>
   <br>
