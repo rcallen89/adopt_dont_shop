@@ -5,5 +5,6 @@
 <p>Age: <%= @pet.age %> </p>
 <p>Sex: <%= @pet.sex %> </p>
 <p>Status: <%= @pet.status %> </p>
-<br>
 <%= button_to "Update Pet", "/pets/#{@pet.id}/edit", method: :get %>
+<%= button_to "Delete Pet", "/pets/#{@pet.id}", method: :delete %>
+

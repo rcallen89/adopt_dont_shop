@@ -3,7 +3,7 @@
 
 
 
-<%= form_tag("/shelters/#{@shelter.id}/edit", method: :patch) do%>
+<%= form_tag("/shelters/#{@shelter.id}", method: :patch) do%>
   <%= label_tag 'Name:' %>
   <%= text_field_tag 'name', @shelter.name, :required => true%>
   <br>

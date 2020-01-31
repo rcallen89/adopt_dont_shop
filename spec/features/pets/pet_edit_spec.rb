@@ -26,7 +26,7 @@ RSpec.describe 'Pet Update Page', type: :feature do
       fill_in 'sex', with: "Still Female"
 
       click_on "Update Pet"
-      save_and_open_page
+      
       expect(current_path).to eq("/pets/#{pet_1.id}")
       expect(page).to have_content("Edited")
       expect(page).to_not have_content("1")

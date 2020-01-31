@@ -2,6 +2,6 @@
 
 <p>Address: <%= @shelter.address %>, <%= @shelter.city %> <%= @shelter.state %>, <%= @shelter.zip%></p>
 <br>
-<%= button_to "Update Shelter", "/shelters/#{@shelter.id}/edit", method: :get %>
 <%= button_to "Our Pets", "/shelters/#{@shelter.id}/pets", method: :get %>
-<%= button_to "Delete Shelter", "/shelters/#{@shelter.id}", method: :delete %>
+<%= button_to "Update Shelter", "/shelters/#{@shelter.id}/edit", method: :get, id: "#{@shelter.name}", class: "up-button" %>
+<%= button_to "Delete Shelter", "/shelters/#{@shelter.id}", method: :delete, id: "#{@shelter.id}", class: "del-button"%>
