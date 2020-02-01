@@ -9,4 +9,6 @@
     <li>Sex: <%= pet.sex %></li>
     <li>Shelter: <%= link_to "#{pet.shelter.name}", "/shelters/#{pet.shelter.id}" %></li>
   </ul>
+  <%= button_to "Update Pet", "/pets/#{pet.id}/edit", method: :get, id: "#{pet.name}", class: "up-button"  %>
+  <%= button_to "Delete Pet", "/pets/#{pet.id}", method: :delete, id: "#{pet.name}-delete", class: "del-button"  %>
 <% end %>

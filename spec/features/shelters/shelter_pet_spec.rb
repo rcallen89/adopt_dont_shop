@@ -64,3 +64,57 @@ RSpec.describe 'shelter pet page', type: :feature do
     end
   end
 end
+
+RSpec.describe "Shelter Pet Index Page Update", type: :feature do
+  context "as a user" do
+    it "can see a update button for each pet" do
+      mike = Shelter.create(name: "Mike's Shelter",
+               address: "1331 17th Street",
+               city: 'Denver',
+               state: 'CO',
+               zip: '80202')
+
+      pet_1 = Pet.create(name: "Athena",
+                age: "1",
+                sex: "F",
+                description: 'butthead',
+                image: 'https://image.shutterstock.com/image-photo/beagle-running-over-green-meadow-600w-1563583912.jpg',
+                status: "available",
+                shelter_id: mike.id)
+
+      visit "/shelters/#{mike.id}/pets"
+
+      expect(page).to have_button("Update Pet", count: mike.pets.count)
+
+      click_on("Update Pet", id: pet_1.name)
+
+      expect(current_path).to eq("/pets/#{pet_1.id}/edit")
+      expect(page).to have_content("Athena")
+    end
+
+    it "can see a delete button for each pet" do
+      mike = Shelter.create(name: "Mike's Shelter",
+               address: "1331 17th Street",
+               city: 'Denver',
+               state: 'CO',
+               zip: '80202')
+
+      pet_1 = Pet.create(name: "Athena",
+                age: "1",
+                sex: "F",
+                description: 'butthead',
+                image: 'https://image.shutterstock.com/image-photo/beagle-running-over-green-meadow-600w-1563583912.jpg',
+                status: "available",
+                shelter_id: mike.id)
+
+      visit "/shelters/#{mike.id}/pets"
+
+      expect(page).to have_button("Delete Pet", count: mike.pets.count)
+
+      click_on("Delete Pet", id: "#{pet_1.name}-delete")
+
+      expect(current_path).to eq("/pets")
+      expect(page).to_not have_content("Athena")
+    end
+  end
+end

@@ -50,7 +50,6 @@ RSpec.describe 'shelter index page update', type: :feature do
       visit '/shelters'
 
       expect(page).to have_button('Update Shelter', count: Shelter.all.count)
-        save_and_open_page
       
       click_on("Update Shelter", id: shelter_1.name)
 
@@ -76,7 +75,7 @@ RSpec.describe 'shelter index page update', type: :feature do
 
       expect(page).to have_button('Delete Shelter', count: Shelter.all.count)
 
-      click_on("Delete Shelter", id: shelter_1.id)
+      click_on("Delete Shelter", id: "#{shelter_1.name}-delete")
 
       expect(page).to_not have_content("Pets R Us")
     end
