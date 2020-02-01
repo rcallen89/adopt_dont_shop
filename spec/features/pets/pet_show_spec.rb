@@ -3,19 +3,10 @@ require 'rails_helper'
 RSpec.describe 'Pet Show Page', type: :feature do
   context 'as a visitor' do
     it "can show pet info" do
-      mike = Shelter.create(name: "Mike's Shelter",
-                            address: "1331 17th Street",
-                            city: 'Denver',
-                            state: 'CO',
-                            zip: '80202')
-
-      pet_2 = Pet.create(name: "Athena",
-                         age: "1 year old",
-                         sex: "F",
-                         description: 'butthead',
-                         image: 'https://image.shutterstock.com/image-photo/beagle-running-over-green-meadow-600w-1563583912.jpg',
-                         status: "available",
-                         shelter_id: mike.id)
+      mike = create(:shelter)
+      meg = create(:shelter, name: "Meg's Shelter")
+      pet_1 = create(:pet, shelter: mike)
+      pet_2 = create(:pet, name: "Odell", shelter: meg)
 
       visit "/pets/#{pet_2.id}"
 
@@ -32,21 +23,12 @@ end
 RSpec.describe 'Pet Show Page Delete', type: :feature do
   context 'as a user' do
     it 'can delete a pet' do
-      mike = Shelter.create(name: "Mike's Shelter",
-                            address: "1331 17th Street",
-                            city: 'Denver',
-                            state: 'CO',
-                            zip: '80202')
+      mike = create(:shelter)
+      meg = create(:shelter, name: "Meg's Shelter")
+      pet_1 = create(:pet, shelter: mike)
+      pet_2 = create(:pet, name: "Odell", shelter: meg)
 
-      pet_2 = Pet.create(name: "Athena",
-                         age: "1 year old",
-                         sex: "F",
-                         description: 'butthead',
-                         image: 'https://image.shutterstock.com/image-photo/beagle-running-over-green-meadow-600w-1563583912.jpg',
-                         status: "available",
-                         shelter_id: mike.id)
-
-      visit "/pets/#{pet_2.id}"
+      visit "/pets/#{pet_1.id}"
 
       click_on "Delete Pet"
 

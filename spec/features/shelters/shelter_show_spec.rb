@@ -3,11 +3,8 @@ require 'rails_helper'
 RSpec.describe 'shelter show page', type: :feature do
   context 'as a user' do
     it 'can see that shelter information' do
-      shelter_1 = Shelter.create(name: 'Pets R Us',
-                                 address: '123 Main St',
-                                 city: 'Denver',
-                                 state: 'CO',
-                                 zip: '80134')
+      shelter_1 = create(:shelter)
+
 
       visit "/shelters/#{shelter_1.id}"
 
@@ -23,11 +20,8 @@ end
 RSpec.describe 'shelter show page with update', type: :feature do
   context 'as a user' do
     it 'can see link to update shelter information' do
-      shelter_1 = Shelter.create(name: 'Pets R Us',
-                                 address: '123 Main St',
-                                 city: 'Denver',
-                                 state: 'CO',
-                                 zip: '80134')
+      shelter_1 = create(:shelter)
+
 
       visit "/shelters/#{shelter_1.id}"
       
@@ -41,11 +35,8 @@ end
 RSpec.describe 'shelter show delete', type: :feature do
   context 'as a user' do
     it 'has a delete link and reroutes to shelter index' do
-      shelter_1 = Shelter.create(name: 'Pets R Us',
-                                 address: '123 Main St',
-                                 city: 'Denver',
-                                 state: 'CO',
-                                 zip: '80134')
+      shelter_1 = create(:shelter)
+
 
       visit "/shelters/#{shelter_1.id}"
     

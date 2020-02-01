@@ -3,11 +3,7 @@ require 'rails_helper'
 RSpec.describe 'shelter edit page', type: :feature do
   context 'as a user' do
     it 'can see form with existing data to edit' do
-      shelter_1 = Shelter.create(name: 'Pets R Us',
-                                 address: '123 Main St',
-                                 city: 'Denver',
-                                 state: 'CO',
-                                 zip: '80134')
+      shelter_1 = create(:shelter)
 
       visit "/shelters/#{shelter_1.id}/edit"
 

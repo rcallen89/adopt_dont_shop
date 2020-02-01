@@ -3,16 +3,8 @@ require 'rails_helper'
 RSpec.describe 'shelter index page show all', type: :feature do
   context 'as a user' do
     it 'can see all shelter names' do
-      shelter_1 = Shelter.create(name: 'Pets R Us',
-                                 address: '123 Main St',
-                                 city: 'Denver',
-                                 state: 'CO',
-                                 zip: '80134')
-      shelter_2 = Shelter.create(name: 'Petopia',
-                                 address: '4343 1st St',
-                                 city: 'Denver',
-                                 state: 'CO',
-                                 zip: '80134')
+      shelter_1 = create(:shelter)
+      shelter_2 = create(:shelter, name: "Meg's Shelter")
 
       visit '/shelters'
 
@@ -37,16 +29,9 @@ end
 RSpec.describe 'shelter index page update', type: :feature do
   context 'as a user' do
     it 'has a update button next to every shelter' do
-      shelter_1 = Shelter.create(name: 'Pets R Us',
-                                 address: '123 Main St',
-                                 city: 'Denver',
-                                 state: 'CO',
-                                 zip: '80134')
-      shelter_2 = Shelter.create(name: 'Petopia',
-                                 address: '4343 1st St',
-                                 city: 'Denver',
-                                 state: 'CO',
-                                 zip: '80134')
+      shelter_1 = create(:shelter)
+      shelter_2 = create(:shelter, name: "Meg's Shelter")
+
       visit '/shelters'
 
       expect(page).to have_button('Update Shelter', count: Shelter.all.count)
@@ -61,16 +46,9 @@ end
 RSpec.describe 'shelter index page update', type: :feature do
   context 'as a user' do
     it 'has a delete button next to every shelter' do
-      shelter_1 = Shelter.create(name: 'Pets R Us',
-                                 address: '123 Main St',
-                                 city: 'Denver',
-                                 state: 'CO',
-                                 zip: '80134')
-      shelter_2 = Shelter.create(name: 'Petopia',
-                                 address: '4343 1st St',
-                                 city: 'Denver',
-                                 state: 'CO',
-                                 zip: '80134')
+      shelter_1 = create(:shelter)
+      shelter_2 = create(:shelter, name: "Meg's Shelter")
+
       visit '/shelters'
 
       expect(page).to have_button('Delete Shelter', count: Shelter.all.count)
