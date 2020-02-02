@@ -1,9 +1,11 @@
 <h1>All Pets</h1>
 <%# <a href="/shelters/new">Input New Shelter</a></br></br> %>
 
+<div class="pet-block">
 <% @pets.each do |pet| %>
+  <section class="pet-bubble">
   <h2>Name: <%= link_to "#{pet.name}", "/pets/#{pet.id}" %></h2>
-  <img src="<%= pet.image %>">
+  <img src="<%= pet.image %>" class="pet-image">
   <ul>
     <li>Age: <%= pet.age %></li>
     <li>Sex: <%= pet.sex %></li>
@@ -11,4 +13,6 @@
   </ul>
   <%= button_to "Update Pet", "/pets/#{pet.id}/edit", method: :get, id: "#{pet.name}", class: "up-button"  %>
   <%= button_to "Delete Pet", "/pets/#{pet.id}", method: :delete, id: "#{pet.name}-delete", class: "del-button"  %>
+  </section>
 <% end %>
+<div>
