@@ -23,7 +23,7 @@ Pet.create(name: "Athena",
            sex: "F",
            description: 'Butthead',
            image: 'https://image.shutterstock.com/image-photo/beagle-running-over-green-meadow-600w-1563583912.jpg',
-           status: "available",
+           status: "Available",
            shelter_id: mike.id)
 
 Pet.create(name: "Odell",
@@ -31,5 +31,5 @@ Pet.create(name: "Odell",
            sex: "M",
            description: 'good dog',
            image: 'https://image.shutterstock.com/image-photo/beagle-running-over-green-meadow-600w-1563583912.jpg',
-           status: "available",
+           status: "Available",
            shelter_id: meg.id)
