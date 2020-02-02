@@ -1,0 +1,35 @@
+header {
+  padding: 5px;
+  background-color: rgba(120, 241, 241, 0.637);
+  color: rgb(104, 102, 102);
+  text-shadow: 1px 1px black;
+  border: 1px solid rgb(1, 71, 71);
+  margin-bottom: 0px;
+}
+
+nav {
+  margin-top: 0px;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  background-color: rgb(1, 71, 71);
+}
+
+li {
+  list-style-type: none;
+}
+
+.navli {
+  border-radius: 55%;
+  border: 1px solid rgb(41, 40, 40);
+  background-color: rgb(3, 121, 121);
+  padding: 10px;
+  float: right;
+  list-style-type: none;
+  color: white;
+  text-decoration: white;
+}
+
+.navli:hover {
+  background-color: rgb(1, 71, 71);
+}

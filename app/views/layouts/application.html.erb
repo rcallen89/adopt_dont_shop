@@ -9,13 +9,17 @@
   </head>
 
   <body>
+    <header>
     <h1>Welcome to Adopty No Shoppy</h1>
-
+    </header>
+    
+    <nav>
     <ul>
-      <li><%= link_to "Shelter Index", '/shelters' %></li>
-      <li><%= link_to "Pet Index", '/pets' %></li>
+      <li><%= link_to "Shelter Index", '/shelters', class: "navli" %></li>
+      <li><%= link_to "Pet Index", '/pets', class: "navli" %></li>
     </ul>
-    <hr>
+    </nav>
+
     <%= yield %>
   </body>
 </html>
