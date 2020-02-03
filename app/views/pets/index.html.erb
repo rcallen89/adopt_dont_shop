@@ -8,7 +8,7 @@
   <img src="<%= pet.image %>" class="pet-image">
   <ul>
     <li>Age: <%= pet.age %></li>
-    <li>Sex: <%= pet.sex %></li>
+    <li>Sex: <%= pet.gender %></li>
     <li>Shelter: <%= link_to "#{pet.shelter.name}", "/shelters/#{pet.shelter.id}" %></li>
   </ul>
   <%= button_to "Update Pet", "/pets/#{pet.id}/edit", method: :get, id: "#{pet.name}", class: "up-button"  %>

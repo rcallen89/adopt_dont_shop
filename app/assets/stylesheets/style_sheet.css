@@ -7,6 +7,10 @@ header {
   margin-bottom: 0px;
 }
 
+body {
+  background-color: rgb(231, 242, 252);
+}
+
 nav {
   margin-top: 0px;
   margin-bottom: 10px;
@@ -38,14 +42,14 @@ li {
   display: inline-block;
   text-align: center;
   border-radius: 25%;
-  background-image: url(https://lh3.googleusercontent.com/proxy/VtfgyJkzsfyhHVZwYQ2EEqYX8FO8_lR5ebnTHjxZi2CJqA39w7Pz_c34qzghijEzp4Z4lRDrceiFajtcqNuX11U_P_Ljoq2S7LL3tSvaA54NbliBVplrDc6aUDiK);
+  background-color: rgba(120, 241, 241, 0.637);
   border: 3px solid rgb(5, 119, 119);
   max-width: 24%;
+  color: darkslateblue;
 }
 
 .pet-image {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 5%;
   max-width: 80%;
 }
