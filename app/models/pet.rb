@@ -3,6 +3,6 @@ class Pet < ApplicationRecord
   belongs_to :shelter
 
   def gender
-    sex.split(//).first.capitalize
+    sex.first.capitalize
   end
 end

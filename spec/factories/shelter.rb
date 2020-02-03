@@ -6,12 +6,4 @@ FactoryBot.define do
     state { "CO" }
     zip { "80134" }
   end
-
-  factory :shelter2 do
-    name { "Petopia" }
-    address { "4343 1st St" }
-    city { "Denver" }
-    state { "CO" }
-    zip { "80134" }
-  end
 end

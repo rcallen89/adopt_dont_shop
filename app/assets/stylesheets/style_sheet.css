@@ -53,3 +53,11 @@ li {
   margin-left: 5%;
   max-width: 80%;
 }
+
+.up-button {
+  box-shadow: 2px 2px black;
+}
+
+.up-button:hover {
+  box-shadow: -2px -2px black;
+}
